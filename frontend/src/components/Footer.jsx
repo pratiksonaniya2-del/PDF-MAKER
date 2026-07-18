@@ -14,28 +14,28 @@ function Footer() {
 
         <div className="flex items-center gap-6">
           <a
-            href="YOUR_GITHUB"
+            href="https://github.com/pratiksonaniya2-del"
             target="_blank"
             rel="noreferrer"
-            className="rounded-lg p-2 text-zinc-500 transition-colors duration-300 hover:text-green-400 hover:shadow-[0_0_18px_rgba(74,222,128,0.35)]"
+            className="rounded-lg p-2 text-zinc-500 transition-colors duration-300 hover:text-green-400 x"
           >
             <FaGithub size={22} />
           </a>
 
           <a
-            href="YOUR_LINKEDIN"
+            href="https://www.linkedin.com/in/pratik-sonaniya-b69b733b2?utm_source=share_via&utm_content=profile&utm_medium=member_android"
             target="_blank"
             rel="noreferrer"
-            className="rounded-lg p-2 text-zinc-500 transition-colors duration-300 hover:text-sky-400 hover:shadow-[0_0_18px_rgba(56,189,248,0.35)]"
+            className="rounded-lg p-2 text-zinc-500 transition-colors duration-300 hover:text-sky-400 "
           >
             <FaLinkedin size={22} />
           </a>
 
           <a
-            href="YOUR_INSTAGRAM"
+            href="https://www.instagram.com/pratik_sonaniya_?igsh=MWRiY3VtNHNxNnY4cw=="
             target="_blank"
             rel="noreferrer"
-            className="rounded-lg p-2 text-zinc-500 transition-colors duration-300 hover:text-rose-400 hover:shadow-[0_0_18px_rgba(251,113,133,0.35)]"
+            className="rounded-lg p-2 text-zinc-500 transition-colors duration-300 hover:text-rose-400 "
           >
             <FaInstagram size={22} />
           </a>
