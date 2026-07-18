@@ -4,7 +4,7 @@ import { getDocumentById } from "../services/documentService";
 import EditorNavbar from "../components/editor/EditorNavbar";
 import Toolbar from "../components/editor/Toolbar";
 import Paper from "../components/editor/Paper";
-
+import TiptapEditor from "../components/editor/TiptapEditor";
 function Editor() {
   const { id } = useParams();
 
@@ -18,17 +18,17 @@ function Editor() {
     );
   }
 
-  return (
-    <div className="min-h-screen bg-gray-200 dark:bg-zinc-900">
-      <EditorNavbar document={document} />
+    return (
+  <div className="min-h-screen bg-zinc-200 dark:bg-zinc-900">
+    <EditorNavbar document={document} />
 
-      <Toolbar />
-
-      <main className="py-14">
-        <Paper document={document} />
-      </main>
+    <div className="flex justify-center py-10 overflow-y-auto">
+      <Paper pageNumber={1}>
+        <TiptapEditor document={document} />
+      </Paper>
     </div>
-  );
+  </div>
+);
 }
 
 export default Editor;

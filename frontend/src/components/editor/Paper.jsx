@@ -1,10 +1,9 @@
 import PageNumber from "./PageNumber";
 import TiptapEditor from "./TiptapEditor";
 
-function Paper({document}) {
+function Paper({ children, pageNumber }) {
   return (
-    <div className="flex flex-col items-center">
-
+    <div className="mb-10 flex flex-col items-center">
       <div
         className="
           w-[794px]
@@ -13,13 +12,15 @@ function Paper({document}) {
           shadow-xl
           rounded-sm
           p-20
+          border border-gray-300
         "
       >
-        <TiptapEditor document={document}/>
+        {children}
       </div>
 
-      <PageNumber page={1} />
-
+      <p className="mt-3 text-sm text-gray-500">
+        Page {pageNumber}
+      </p>
     </div>
   );
 }

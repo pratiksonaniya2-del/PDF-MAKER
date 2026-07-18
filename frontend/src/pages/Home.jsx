@@ -12,14 +12,17 @@ function Home() {
   const [search, setSearch] = useState("");
 
   useEffect(() => {
-    setDocuments(getDocuments());
+    async function loadDocuments() {
+      const docs = await getDocuments();
+      setDocuments(docs);
+    }
+
+    loadDocuments();
   }, []);
 
   const filteredDocuments = useMemo(() => {
     return documents.filter((doc) =>
-      (doc.title || "Untitled")
-        .toLowerCase()
-        .includes(search.toLowerCase())
+      (doc.title || "Untitled").toLowerCase().includes(search.toLowerCase()),
     );
   }, [documents, search]);
 
@@ -28,15 +31,10 @@ function Home() {
       <Navbar />
 
       <main className="mx-auto max-w-7xl px-6 py-10">
-
         <section className="mb-10">
-          <h1 className="text-4xl font-bold dark:text-white">
-            Welcome Back
-          </h1>
+          <h1 className="text-4xl font-bold dark:text-white">Welcome Back</h1>
 
-          <p className="mt-2 text-gray-500">
-            Create and manage your PDFs.
-          </p>
+          <p className="mt-2 text-gray-500">Create and manage your PDFs.</p>
         </section>
 
         <CreateCard />
@@ -52,22 +50,16 @@ function Home() {
         />
 
         <section className="mt-10">
-
           {filteredDocuments.length === 0 ? (
             <EmptyState />
           ) : (
             <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-3">
               {filteredDocuments.map((doc) => (
-                <DocumentCard
-                  key={doc.id}
-                  document={doc}
-                />
+                <DocumentCard key={doc.id} document={doc} />
               ))}
             </div>
           )}
-
         </section>
-
       </main>
     </div>
   );
