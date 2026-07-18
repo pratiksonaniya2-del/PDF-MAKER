@@ -1,5 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-
+import Footer from "../components/Footer";
 import Navbar from "../components/layout/Navbar";
 import CreateCard from "../components/home/CreateCard";
 import EmptyState from "../components/home/EmptyState";
@@ -30,11 +30,15 @@ function Home() {
     <div className="min-h-screen bg-gray-50 dark:bg-zinc-950">
       <Navbar />
 
-      <main className="mx-auto max-w-7xl px-6 py-10">
+      <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
         <section className="mb-10">
-          <h1 className="text-4xl font-bold dark:text-white">Welcome Back</h1>
+          <h1 className="text-3xl font-bold text-zinc-900 dark:text-white sm:text-4xl">
+            Welcome Back
+          </h1>
 
-          <p className="mt-2 text-gray-500">Create and manage your PDFs.</p>
+          <p className="mt-2 text-gray-500 dark:text-zinc-400">
+            Create, organize, and export your notes effortlessly.
+          </p>
         </section>
 
         <CreateCard />
@@ -44,9 +48,7 @@ function Home() {
           placeholder="Search documents..."
           value={search}
           onChange={(e) => setSearch(e.target.value)}
-          className="mt-10 w-full rounded-xl border border-gray-300
-          dark:border-zinc-700 bg-white dark:bg-zinc-900
-          p-4 outline-none"
+          className="mt-10 w-full rounded-xl border border-gray-300 dark:border-zinc-700 bg-white dark:bg-zinc-900 p-4 text-zinc-900 dark:text-white placeholder:text-zinc-400 outline-none transition focus:border-blue-500 focus:ring-2 focus:ring-blue-500/20"
         />
 
         <section className="mt-10">
@@ -60,6 +62,7 @@ function Home() {
             </div>
           )}
         </section>
+        <Footer />
       </main>
     </div>
   );

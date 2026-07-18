@@ -1,10 +1,29 @@
 import { ArrowLeft, Download } from "lucide-react";
 import { Link } from "react-router-dom";
 import { exportPDF } from "../../utils/exportPdf";
+import { useState, useEffect, useRef } from "react";
+import { updateDocumentTitle } from "../../services/documentService";
 
-function EditorNavbar({ document }) {
+
+function EditorNavbar({ document, saveStatus }) {
+  const [title, setTitle] = useState(document.title || "Untitled Document");
+  const saveTimeout = useRef(null);
+  useEffect(() => {
+    setTitle(document.title || "Untitled Document");
+  }, [document]);
   const handleDownload = () => {
     exportPDF(document.title);
+  };
+  const handleTitleChange = (e) => {
+    const newTitle = e.target.value;
+
+    setTitle(newTitle);
+
+    clearTimeout(saveTimeout.current);
+
+    saveTimeout.current = setTimeout(() => {
+      updateDocumentTitle(document.id, newTitle);
+    }, 500);
   };
 
   return (
@@ -17,10 +36,21 @@ function EditorNavbar({ document }) {
           >
             <ArrowLeft size={20} />
           </Link>
-
-          <h1 className="text-lg font-semibold dark:text-white">
-            {document.title || "Untitled Document"}
-          </h1>
+          <div>
+            <input
+              value={title}
+              onChange={handleTitleChange}
+              className="bg-transparent text-lg font-semibold outline-none dark:text-white"
+            />
+            updateDocumentTitle(document.id, newTitle);
+            <p
+              className={`text-xs ${
+                saveStatus === "saving" ? "text-amber-500" : "text-emerald-500"
+              }`}
+            >
+              {saveStatus === "saving" ? "Saving..." : "Saved ✓"}
+            </p>
+          </div>
         </div>
 
         <button

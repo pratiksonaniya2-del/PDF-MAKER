@@ -4,7 +4,7 @@ import Placeholder from "@tiptap/extension-placeholder";
 import { useRef } from "react";
 import { updateDocumentContent } from "../../services/documentService";
 
-function TiptapEditor({ document }) {
+function TiptapEditor({ document , onSaveStatusChange}) {
   const saveTimeout = useRef(null);
 
   const editor = useEditor({
@@ -25,7 +25,7 @@ function TiptapEditor({ document }) {
 
     onUpdate({ editor }) {
       if (!document) return;
-
+      onSaveStatusChange?.("Saving")
       clearTimeout(saveTimeout.current);
 
       saveTimeout.current = setTimeout(() => {

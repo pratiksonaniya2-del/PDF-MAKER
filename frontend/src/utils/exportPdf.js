@@ -1,36 +1,39 @@
-import { jsPDF } from "jspdf";
-import html2canvas from "html2canvas-pro";
+import html2pdf from "html2pdf.js";
 
-window.html2canvas = html2canvas;
 export async function exportPDF(title) {
-  const editor = document.querySelector(".ProseMirror");
+  const element = document.getElementById("paper-export");
 
-  if (!editor) return;
+  if (!element) return;
 
-  const pdf = new jsPDF({
-    orientation: "portrait",
-    unit: "pt",
-    format: "a4",
-  });
+  const options = {
+    margin: 10,
 
-  await pdf.html(editor, {
-    x: 40,
-    y: 40,
+    filename: `${title || "document"}.pdf`,
 
-    margin: [40, 40, 40, 40],
-
-    autoPaging: "text",
-
-    width: 515,
-
-    windowWidth: editor.scrollWidth,
+    image: {
+      type: "jpeg",
+      quality: 1,
+    },
 
     html2canvas: {
       scale: 2,
       useCORS: true,
-      logging: false,
+      scrollY: 0,
+      backgroundColor: "#ffffff",
     },
-  });
 
-  pdf.save(`${title || "document"}.pdf`);
+    jsPDF: {
+      unit: "mm",
+      format: "a4",
+      orientation: "portrait",
+    },
+
+    pagebreak: {
+      mode: ["avoid-all", "css", "legacy"],
+      before: ".page-break",
+      avoid: ["img", "pre", "blockquote"],
+    },
+  };
+
+  await html2pdf().set(options).from(element).save();
 }

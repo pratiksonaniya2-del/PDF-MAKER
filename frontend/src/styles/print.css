@@ -1,0 +1,53 @@
+@media print {
+
+  body {
+    background: white !important;
+  }
+
+  header,
+  button,
+  nav,
+  .no-print {
+    display: none !important;
+  }
+
+  #paper-export {
+    width: 100% !important;
+    min-height: auto !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    box-shadow: none !important;
+    border: none !important;
+    border-radius: 0 !important;
+    background: white !important;
+  }
+
+  .ProseMirror {
+    font-size: 14pt;
+    line-height: 1.8;
+    color: black;
+  }
+
+  h1,
+  h2,
+  h3 {
+    page-break-after: avoid;
+    break-after: avoid;
+  }
+
+  p,
+  li {
+    page-break-inside: avoid;
+    break-inside: avoid;
+  }
+
+  img {
+    max-width: 100%;
+    page-break-inside: avoid;
+  }
+
+  @page {
+    size: A4;
+    margin: 20mm;
+  }
+}

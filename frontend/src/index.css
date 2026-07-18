@@ -1,5 +1,6 @@
-@import "tailwindcss";
-
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 .tiptap p.is-editor-empty:first-child::before {
   color: #9ca3af;
@@ -7,4 +8,24 @@
   float: left;
   height: 0;
   pointer-events: none;
+}
+
+.ProseMirror h1,
+.ProseMirror h2,
+.ProseMirror h3 {
+  page-break-after: avoid;
+}
+
+.ProseMirror p,
+.ProseMirror li {
+  page-break-inside: avoid;
+}
+
+.ProseMirror pre,
+.ProseMirror blockquote {
+  page-break-inside: avoid;
+}
+
+.ProseMirror img {
+  max-width: 100%;
 }
