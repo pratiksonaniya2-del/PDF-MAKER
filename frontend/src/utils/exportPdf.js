@@ -1,46 +1,36 @@
-import { PDFDocument, StandardFonts, rgb } from "pdf-lib";
+import { jsPDF } from "jspdf";
+import html2canvas from "html2canvas-pro";
 
-export async function exportPDF(title, content) {
-  const pdfDoc = await PDFDocument.create();
+window.html2canvas = html2canvas;
+export async function exportPDF(title) {
+  const editor = document.querySelector(".ProseMirror");
 
-  const font = await pdfDoc.embedFont(StandardFonts.Helvetica);
+  if (!editor) return;
 
-  const page = pdfDoc.addPage([595, 842]);
-
-  const { height } = page.getSize();
-
-  page.drawText(title, {
-    x: 50,
-    y: height - 50,
-    size: 22,
-    font,
-    color: rgb(0, 0, 0),
+  const pdf = new jsPDF({
+    orientation: "portrait",
+    unit: "pt",
+    format: "a4",
   });
 
-  page.drawText(content.replace(/<[^>]*>/g, ""), {
-    x: 50,
-    y: height - 90,
-    size: 12,
-    font,
-    maxWidth: 500,
-    lineHeight: 18,
+  await pdf.html(editor, {
+    x: 40,
+    y: 40,
+
+    margin: [40, 40, 40, 40],
+
+    autoPaging: "text",
+
+    width: 515,
+
+    windowWidth: editor.scrollWidth,
+
+    html2canvas: {
+      scale: 2,
+      useCORS: true,
+      logging: false,
+    },
   });
 
-  const bytes = await pdfDoc.save();
-
-  const blob = new Blob([bytes], {
-    type: "application/pdf",
-  });
-
-  const url = URL.createObjectURL(blob);
-
-  const a = document.createElement("a");
-
-  a.href = url;
-
-  a.download = `${title || "document"}.pdf`;
-
-  a.click();
-
-  URL.revokeObjectURL(url);
+  pdf.save(`${title || "document"}.pdf`);
 }

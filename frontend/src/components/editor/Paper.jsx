@@ -1,10 +1,8 @@
-import PageNumber from "./PageNumber";
-import TiptapEditor from "./TiptapEditor";
-
 function Paper({ children, pageNumber }) {
   return (
     <div className="mb-10 flex flex-col items-center">
       <div
+        id="paper-export"
         className="
           w-[794px]
           min-h-[1123px]
