@@ -30,12 +30,9 @@ function Editor() {
         paperRef={paperRef}
       />
 
-      <div className="flex justify-center py-10 overflow-y-auto">
-        <Paper ref={paperRef} pageNumber={1}>
-          <TiptapEditor
-            document={document}
-            onSaveStatusChange={setSaveStatus}
-          />
+      <div className="flex justify-center py-10">
+        <Paper ref={paperRef}>
+          <TiptapEditor document={document} />
         </Paper>
       </div>
     </div>

@@ -1,5 +1,4 @@
 import { FileText } from "lucide-react";
-import ThemeToggle from "../common/ThemeToggle";
 function Navbar() {
   return (
     <header className="w-full border-b border-gray-200 dark:border-zinc-800 bg-white dark:bg-zinc-950">
@@ -19,7 +18,7 @@ function Navbar() {
         {/* Right Side */}
         <div className="flex items-center gap-3">
 
-          <ThemeToggle />
+          
 
         </div>
 

@@ -1,22 +1,15 @@
 import { forwardRef } from "react";
 
-
-
-function Paper({ children, pageNumber }) {
+const Paper = forwardRef(({ children }, ref) => {
   return (
-    <div className="mb-10 flex flex-col items-center">
-      <div
-        id="paper-export"
-        className="w-[794px] bg-white p-20 border border-gray-300"
-      >
-        {children}
-      </div>
-
-      <p className="mt-3 text-sm text-gray-500">
-        Page {pageNumber}
-      </p>
+    <div
+      ref={ref}
+      id="paper-export"
+      className="w-[794px] min-h-[1123px] bg-white shadow-xl border border-gray-300 p-20"
+    >
+      {children}
     </div>
   );
-}
+});
 
 export default Paper;
