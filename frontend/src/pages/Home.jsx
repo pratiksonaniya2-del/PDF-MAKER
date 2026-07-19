@@ -1,6 +1,5 @@
 import { useEffect, useMemo, useState } from "react";
-import Footer from "../components/Footer";
-import Navbar from "../components/layout/Navbar";
+
 import CreateCard from "../components/home/CreateCard";
 import EmptyState from "../components/home/EmptyState";
 import DocumentCard from "../components/home/DocumentCard";
@@ -28,7 +27,7 @@ function Home() {
 
   return (
     <div className="min-h-screen bg-gray-50 dark:bg-zinc-950">
-      <Navbar />
+      
 
       <main className="mx-auto max-w-7xl px-4 py-8 sm:px-6 sm:py-10">
         <section className="mb-10">
@@ -62,7 +61,6 @@ function Home() {
             </div>
           )}
         </section>
-        <Footer />
       </main>
     </div>
   );
