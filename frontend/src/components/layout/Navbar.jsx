@@ -47,12 +47,7 @@ export default function Navbar() {
         </nav>
 
         {/* Button */}
-        <Link
-          to="/"
-          className="hidden md:block px-5 py-2 rounded-xl bg-indigo-600 hover:bg-indigo-700 transition-colors"
-        >
-          New Note
-        </Link>
+        
 
         {/* Mobile Button */}
         <button
@@ -93,15 +88,6 @@ export default function Navbar() {
             >
               Contact
             </NavLink>
-
-            <div className="p-6">
-              <Link
-                to="/"
-                className="block text-center bg-indigo-600 rounded-xl py-3 hover:bg-indigo-700 transition-colors"
-              >
-                New Note
-              </Link>
-            </div>
 
           </nav>
 
