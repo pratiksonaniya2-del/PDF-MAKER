@@ -33,7 +33,6 @@ export default function About() {
     <main className="min-h-screen bg-zinc-950 text-white">
       <div className="max-w-5xl mx-auto px-6 py-16">
 
-        {/* Hero */}
         <section className="text-center">
           <h1 className="text-5xl font-bold tracking-tight">
             About PaperFlow
@@ -46,7 +45,6 @@ export default function About() {
           </p>
         </section>
 
-        {/* What is PaperFlow */}
         <section className="mt-16 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             What is PaperFlow?
@@ -60,7 +58,6 @@ export default function About() {
           </p>
         </section>
 
-        {/* Why */}
         <section className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Why PaperFlow?
@@ -74,7 +71,6 @@ export default function About() {
           </p>
         </section>
 
-        {/* Features */}
         <section className="mt-16">
           <h2 className="text-3xl font-bold tracking-tight">
             Features
@@ -102,7 +98,6 @@ export default function About() {
           </div>
         </section>
 
-        {/* Roadmap */}
         <section className="mt-16 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             What's Next?
@@ -118,7 +113,6 @@ export default function About() {
           </ul>
         </section>
 
-        {/* Footer */}
         <section className="mt-16 border-t border-zinc-800 pt-8 text-center">
           <p className="text-zinc-500">
             Built with React, Vite and Tailwind CSS.

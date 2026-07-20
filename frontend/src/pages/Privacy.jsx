@@ -3,7 +3,6 @@ export default function Privacy() {
     <main className="min-h-screen bg-zinc-950 text-white">
       <div className="max-w-4xl mx-auto px-6 py-16">
 
-        {/* Hero */}
         <section>
           <h1 className="text-5xl font-bold tracking-tight">
             Privacy Policy
@@ -20,7 +19,6 @@ export default function Privacy() {
           </p>
         </section>
 
-        {/* Information We Collect */}
         <section className="mt-12 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Information We Collect
@@ -32,7 +30,6 @@ export default function Privacy() {
           </p>
         </section>
 
-        {/* How We Use Data */}
         <section className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             How We Use Your Information
@@ -45,7 +42,6 @@ export default function Privacy() {
           </ul>
         </section>
 
-        {/* Cookies */}
         <section className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Cookies & Analytics
@@ -58,7 +54,6 @@ export default function Privacy() {
           </p>
         </section>
 
-        {/* Security */}
         <section className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Data Security
@@ -70,7 +65,6 @@ export default function Privacy() {
           </p>
         </section>
 
-        {/* Future Updates */}
         <section className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Changes to This Policy
@@ -82,7 +76,6 @@ export default function Privacy() {
           </p>
         </section>
 
-        {/* Contact */}
         <section className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Contact Us

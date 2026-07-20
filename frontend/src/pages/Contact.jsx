@@ -10,7 +10,6 @@ export default function Contact() {
     <main className="min-h-screen bg-zinc-950 text-white">
       <div className="max-w-6xl mx-auto px-6 py-16">
 
-        {/* Hero */}
         <section className="text-center">
           <h1 className="text-5xl font-bold tracking-tight">
             Contact
@@ -22,10 +21,8 @@ export default function Contact() {
           </p>
         </section>
 
-        {/* Content */}
         <div className="grid lg:grid-cols-2 gap-8 mt-16">
 
-          {/* Contact Form */}
           <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
 
             <h2 className="text-2xl font-semibold">
@@ -89,10 +86,8 @@ export default function Contact() {
             </form>
           </div>
 
-          {/* Contact Information */}
           <div className="space-y-6">
 
-            {/* Email */}
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
 
               <div className="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center">
@@ -116,7 +111,6 @@ export default function Contact() {
 
             </div>
 
-            {/* GitHub */}
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
 
               <div className="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center">
@@ -142,7 +136,6 @@ export default function Contact() {
 
             </div>
 
-            {/* LinkedIn */}
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
 
               <div className="w-12 h-12 rounded-xl bg-zinc-800 flex items-center justify-center">
@@ -168,7 +161,6 @@ export default function Contact() {
 
             </div>
 
-            {/* Response Time */}
             <div className="bg-zinc-900 border border-zinc-800 rounded-2xl p-6">
 
               <h3 className="text-xl font-semibold">

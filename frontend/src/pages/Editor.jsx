@@ -33,10 +33,8 @@ function Editor() {
         paperRef={paperRef}
       />
 
-      {/* Toolbar */}
       <Toolbar editor={editor} />
 
-      {/* Paper */}
       <div className="flex justify-center py-10">
         <Paper ref={paperRef}>
           <TiptapEditor

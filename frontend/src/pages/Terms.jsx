@@ -3,7 +3,6 @@ export default function Terms() {
     <main className="min-h-screen bg-zinc-950 text-white">
       <div className="max-w-4xl mx-auto px-6 py-16">
 
-        {/* Hero */}
         <section>
           <h1 className="text-5xl font-bold tracking-tight">
             Terms of Service
@@ -19,7 +18,6 @@ export default function Terms() {
           </p>
         </section>
 
-        {/* Acceptance */}
         <section className="mt-12 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Acceptance of Terms
@@ -32,7 +30,6 @@ export default function Terms() {
           </p>
         </section>
 
-        {/* Acceptable Use */}
         <section className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Acceptable Use
@@ -45,7 +42,6 @@ export default function Terms() {
           </ul>
         </section>
 
-        {/* Intellectual Property */}
         <section className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Intellectual Property
@@ -58,7 +54,6 @@ export default function Terms() {
           </p>
         </section>
 
-        {/* Disclaimer */}
         <section className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Disclaimer
@@ -71,7 +66,6 @@ export default function Terms() {
           </p>
         </section>
 
-        {/* Limitation */}
         <section className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Limitation of Liability
@@ -84,7 +78,6 @@ export default function Terms() {
           </p>
         </section>
 
-        {/* Changes */}
         <section className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Changes to These Terms
@@ -97,7 +90,6 @@ export default function Terms() {
           </p>
         </section>
 
-        {/* Contact */}
         <section className="mt-8 bg-zinc-900 border border-zinc-800 rounded-2xl p-8">
           <h2 className="text-2xl font-semibold">
             Contact
