@@ -8,7 +8,6 @@ export default function Footer() {
 
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12">
 
-          {/* Brand */}
           <div>
             <div className="flex items-center gap-3">
               <img
@@ -28,7 +27,6 @@ export default function Footer() {
             </p>
           </div>
 
-          {/* Quick Links */}
           <div>
             <h3 className="text-lg font-semibold">
               Quick Links
@@ -74,7 +72,6 @@ export default function Footer() {
             </div>
           </div>
 
-          {/* Connect */}
           <div>
             <h3 className="text-lg font-semibold">
               Connect
@@ -82,7 +79,6 @@ export default function Footer() {
 
             <div className="flex gap-4 mt-5">
 
-              {/* GitHub */}
               <a
                 href="https://github.com/pratiksonaniya2-del"
                 target="_blank"
@@ -92,7 +88,6 @@ export default function Footer() {
                 <FaGithub size={20} />
               </a>
 
-              {/* LinkedIn */}
               <a
                 href="https://www.linkedin.com/in/pratik-sonaniya-b69b733b2?utm_source=share_via&utm_content=profile&utm_medium=member_android"
                 target="_blank"
@@ -102,7 +97,6 @@ export default function Footer() {
                 <FaLinkedin size={20} />
               </a>
 
-              {/* Instagram */}
               <a
                 href="https://www.instagram.com/pratik_sonaniya_?igsh=MWRiY3VtNHNxNnY4cw=="
                 target="_blank"

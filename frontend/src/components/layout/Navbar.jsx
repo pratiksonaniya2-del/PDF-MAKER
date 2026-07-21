@@ -16,7 +16,6 @@ export default function Navbar() {
     <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/90 backdrop-blur">
       <div className="max-w-7xl mx-auto h-16 px-6 flex items-center justify-between">
 
-        {/* Logo */}
         <Link to="/" className="flex items-center gap-3">
           <img
             src="/icon2.jpeg"
@@ -29,7 +28,6 @@ export default function Navbar() {
           </span>
         </Link>
 
-        {/* Desktop Navigation */}
         <nav className="hidden md:flex items-center gap-8">
 
           <NavLink to="/" className={navClass}>
@@ -46,10 +44,8 @@ export default function Navbar() {
 
         </nav>
 
-        {/* Button */}
         
 
-        {/* Mobile Button */}
         <button
           className="md:hidden text-3xl"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -59,7 +55,6 @@ export default function Navbar() {
 
       </div>
 
-      {/* Mobile Menu */}
       {menuOpen && (
         <div className="md:hidden border-t border-zinc-800">
 

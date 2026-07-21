@@ -42,7 +42,6 @@ function Toolbar({ editor }) {
   return (
     <div className="sticky top-16 z-40 border-b border-zinc-800 bg-zinc-950/95 backdrop-blur">
       <div className="mx-auto flex max-w-7xl flex-wrap items-center gap-2 px-6 py-3">
-        {/* Undo */}
         <button
           className={btn}
           onClick={() => editor.chain().focus().undo().run()}
@@ -50,7 +49,6 @@ function Toolbar({ editor }) {
           <FaUndo />
         </button>
 
-        {/* Redo */}
         <button
           className={btn}
           onClick={() => editor.chain().focus().redo().run()}
@@ -60,7 +58,6 @@ function Toolbar({ editor }) {
 
         <div className="mx-2 h-8 w-px bg-zinc-700" />
 
-        {/* Bold */}
         <button
           className={`${btn} ${editor.isActive("bold") ? active : ""}`}
           onClick={() => editor.chain().focus().toggleBold().run()}
@@ -68,7 +65,6 @@ function Toolbar({ editor }) {
           <FaBold />
         </button>
 
-        {/* Italic */}
         <button
           className={`${btn} ${editor.isActive("italic") ? active : ""}`}
           onClick={() => editor.chain().focus().toggleItalic().run()}
@@ -76,7 +72,6 @@ function Toolbar({ editor }) {
           <FaItalic />
         </button>
 
-        {/* Underline */}
         <button
           className={`${btn} ${editor.isActive("underline") ? active : ""}`}
           onClick={() => editor.chain().focus().toggleUnderline().run()}
@@ -86,7 +81,6 @@ function Toolbar({ editor }) {
 
         <div className="mx-2 h-8 w-px bg-zinc-700" />
 
-        {/* H1 */}
         <button
           className={`${btn} ${
             editor.isActive("heading", { level: 1 }) ? active : ""
@@ -98,7 +92,6 @@ function Toolbar({ editor }) {
           H1
         </button>
 
-        {/* H2 */}
         <button
           className={`${btn} ${
             editor.isActive("heading", { level: 2 }) ? active : ""
@@ -110,7 +103,6 @@ function Toolbar({ editor }) {
           H2
         </button>
 
-        {/* H3 */}
         <button
           className={`${btn} ${
             editor.isActive("heading", { level: 3 }) ? active : ""
@@ -124,7 +116,6 @@ function Toolbar({ editor }) {
 
         <div className="mx-2 h-8 w-px bg-zinc-700" />
 
-        {/* Bullet List */}
         <button
           className={`${btn} ${editor.isActive("bulletList") ? active : ""}`}
           onClick={() => editor.chain().focus().toggleBulletList().run()}
@@ -132,7 +123,6 @@ function Toolbar({ editor }) {
           <FaListUl />
         </button>
 
-        {/* Ordered List */}
         <button
           className={`${btn} ${editor.isActive("orderedList") ? active : ""}`}
           onClick={() => editor.chain().focus().toggleOrderedList().run()}
@@ -140,7 +130,6 @@ function Toolbar({ editor }) {
           <FaListOl />
         </button>
 
-        {/* Quote */}
         <button
           className={`${btn} ${editor.isActive("blockquote") ? active : ""}`}
           onClick={() => editor.chain().focus().toggleBlockquote().run()}
@@ -150,7 +139,6 @@ function Toolbar({ editor }) {
 
         <div className="mx-2 h-8 w-px bg-zinc-700" />
 
-        {/* Align Left */}
         <button
           className={btn}
           onClick={() => editor.chain().focus().setTextAlign("left").run()}
@@ -158,7 +146,6 @@ function Toolbar({ editor }) {
           <FaAlignLeft />
         </button>
 
-        {/* Align Center */}
         <button
           className={btn}
           onClick={() => editor.chain().focus().setTextAlign("center").run()}
@@ -166,7 +153,6 @@ function Toolbar({ editor }) {
           <FaAlignCenter />
         </button>
 
-        {/* Align Right */}
         <button
           className={btn}
           onClick={() => editor.chain().focus().setTextAlign("right").run()}
@@ -176,7 +162,6 @@ function Toolbar({ editor }) {
 
         <div className="mx-2 h-8 w-px bg-zinc-700" />
 
-        {/* Highlight */}
         <button
           className={`${btn} ${editor.isActive("highlight") ? active : ""}`}
           onClick={() => editor.chain().focus().toggleHighlight().run()}
@@ -184,7 +169,6 @@ function Toolbar({ editor }) {
           <FaHighlighter />
         </button>
 
-        {/* Link */}
         <button
           className={btn}
           onClick={() => {
