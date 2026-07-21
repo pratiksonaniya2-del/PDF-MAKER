@@ -6,7 +6,7 @@ export async function exportPDF(title) {
   if (!element) return;
 
   const options = {
-    margin: 10,
+    margin: 5,
 
     filename: `${title || "document"}.pdf`,
 
@@ -29,7 +29,7 @@ export async function exportPDF(title) {
     },
 
     pagebreak: {
-      mode: ["avoid-all", "css", "legacy"],
+      mode: ["css", "legacy"],
       before: ".page-break",
       avoid: ["img", "pre", "blockquote"],
     },
