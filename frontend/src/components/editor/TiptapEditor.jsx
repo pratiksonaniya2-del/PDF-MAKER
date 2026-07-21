@@ -42,7 +42,7 @@ function TiptapEditor({ document, onSaveStatusChange, onEditorReady }) {
     editorProps: {
   attributes: {
     class:
-      "prose prose-lg max-w-none min-h-full outline-none text-zinc-900 leading-8 focus:outline-none",
+      "max-w-none min-h-full outline-none text-zinc-900 leading-5 focus:outline-none",
   },
 },
 
