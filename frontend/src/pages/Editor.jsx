@@ -9,12 +9,9 @@ import TiptapEditor from "../components/editor/TiptapEditor";
 
 function Editor() {
   const { id } = useParams();
-
   const paperRef = useRef(null);
-
   const [saveStatus, setSaveStatus] = useState("saved");
   const [editor, setEditor] = useState(null);
-
   const document = getDocumentById(id);
 
   if (!document) {

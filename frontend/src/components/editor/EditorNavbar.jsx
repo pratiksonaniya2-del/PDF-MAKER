@@ -30,9 +30,8 @@ function EditorNavbar({ document, saveStatus }) {
 
   return (
     <header className="sticky top-0 z-50 border-b border-zinc-800 bg-zinc-950/95 backdrop-blur">
-      <div className="mx-auto flex max-w-7xl items-center justify-between px-6 py-4">
-        {/* Left Section */}
-        <div className="flex items-center gap-4">
+      <div className="mx-auto flex max-w-7xl flex-col gap-4 px-4 py-4 md:flex-row md:items-center md:justify-between md:px-6">
+        <div className="flex w-full items-center gap-4 md:w-auto">
           <Link
             to="/"
             className="flex h-10 w-10 items-center justify-center rounded-xl border border-zinc-800 hover:bg-zinc-900 transition-colors"
@@ -52,9 +51,7 @@ function EditorNavbar({ document, saveStatus }) {
 
             <p
               className={`mt-1 text-sm ${
-                saveStatus === "saving"
-                  ? "text-amber-400"
-                  : "text-emerald-400"
+                saveStatus === "saving" ? "text-amber-400" : "text-emerald-400"
               }`}
             >
               {saveStatus === "saving" ? "Saving..." : "Saved ✓"}
@@ -62,10 +59,24 @@ function EditorNavbar({ document, saveStatus }) {
           </div>
         </div>
 
-        {/* Right Section */}
         <button
           onClick={handleDownload}
-          className="flex items-center gap-2 rounded-xl bg-indigo-600 px-5 py-3 font-medium text-white transition-colors hover:bg-indigo-700"
+          className="
+    flex
+    w-full
+    items-center
+    justify-center
+    gap-2
+    rounded-xl
+    bg-indigo-600
+    px-5
+    py-3
+    font-medium
+    text-white
+    transition-colors
+    hover:bg-indigo-700
+    md:w-auto
+  "
         >
           <Download size={18} />
           Download PDF
